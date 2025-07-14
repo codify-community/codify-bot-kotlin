@@ -1,6 +1,7 @@
 package io.github.codify
 
-import io.github.codify.command.PrefixCommand
+import io.github.codify.command.PrefixHandler
+import io.github.codify.command.SlashHandler
 import io.github.codify.internal.BotEnv
 import io.github.codify.internal.DatabaseConfig
 import net.dv8tion.jda.api.JDABuilder
@@ -18,10 +19,10 @@ fun main() {
         .setActivity(Activity.watching("Test Version"))
         .addEventListeners(
             //Slash commands
-
+            SlashHandler(),
 
             //Prefix commands
-            PrefixCommand()
+            PrefixHandler()
         )
         .build()
 }
