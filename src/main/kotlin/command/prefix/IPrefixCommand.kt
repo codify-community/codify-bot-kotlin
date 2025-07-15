@@ -2,6 +2,6 @@
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 
-interface IPrefix {
-    fun respondTo(event: MessageReceivedEvent)
+interface IPrefixCommand {
+    fun response(event: MessageReceivedEvent)
 }
